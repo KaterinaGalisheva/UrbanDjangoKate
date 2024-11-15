@@ -19,6 +19,7 @@ from django.urls import path
 from task2.views import index, index2
 from task3.views import *
 from task4.views import index_cart, index_primary, index_store
+from task5.views import sign_up_by_html, sign_up_by_django
 from django.views.generic import TemplateView
 
 urlpatterns = [
@@ -30,7 +31,10 @@ urlpatterns = [
     path('cart/', TemplateView.as_view(template_name = 'third_task/cart.html')),
     path('cart4/', index_cart),
     path('primary4/', index_primary),
-    path('store4/', index_store)
+    path('store4/', index_store),
+    path('html_sign_up/', sign_up_by_html),
+    path('django_sign_up/', sign_up_by_django),
+    
 ]
 
 
