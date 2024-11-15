@@ -1,0 +1,17 @@
+{% extends 'fourth_task/menu.html'%}
+
+{% block pagename %}
+    <h1>Магазин мороженого</h1>
+{% endblock %}
+
+{% block menu %}
+    {{block.super}}
+{% endblock %}
+
+{% block content %}
+    <h2>Попробуйте наше вкусное мороженое</h2>
+    {% for i in isecream %}
+        <h3>{{i | title}}</h3><button class="button">купить</button>
+    {%endfor%}
+{% endblock %}
+
